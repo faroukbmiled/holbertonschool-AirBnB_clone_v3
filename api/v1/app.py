@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test"""
+"""task number 3"""
 from flask import Flask
 from models import storage
 from api.v1.views import app_views
@@ -12,7 +12,7 @@ app.register_blueprint(app_views)
 
 @app.teardown_appcontext
 def storage_close(self):
-    """exit"""
+    """closing storage"""
     storage.close()
 
 
