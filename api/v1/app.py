@@ -8,6 +8,8 @@ from os import environ
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
+
+
 @app.teardown_appcontext
 def storage_close(self):
     """exit"""
